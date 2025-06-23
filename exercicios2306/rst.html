@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabuada Interativa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .resultado {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Gerador de Tabuada</h2>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="mostrarTabuada()">Gerar Tabuada</button>
+
+    <div class="resultado" id="saida"></div>
+
+    <script>
+        function mostrarTabuada() {
+            let numero = parseInt(document.getElementById('numero').value);
+            let saida = document.getElementById('saida');
+
+            if (isNaN(numero)) {
+                saida.innerHTML = '<strong>Por favor, digite um número válido.</strong>';
+                return;
+            }
+
+            let resultadoHTML = `<h3>Tabuada do ${numero}</h3>`;
+            resultadoHTML += "<ul>";
+
+            for (let i = 1; i <= 10; i++) {
+                resultadoHTML += `<li>${numero} x ${i} = ${numero * i}</li>`;
+            }
+
+            resultadoHTML += "</ul>";
+
+            saida.innerHTML = resultadoHTML;
+        }
+    </script>
+
+</body>
+</html>
