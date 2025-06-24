@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Média</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        body {
+            text-align: center;
+            background-color: azure;
+        }
+
+        #container {
+            background-color: white;
+            padding: 10px;
+            margin: 80px;
+            box-shadow: 2px 2px rgba(0, 0, 0, 0.404);
+        }
+
+        #notas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        #notas input {
+            margin: 5px;
+            padding: 8px;
+            width: 150px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        #res {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        #res.mostrar {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Média</h1>
+
+        <div id="pergunta">
+            <p>Digite suas 3 notas:</p>
+            <div id="notas">
+                <input type="number" id="num" placeholder="Nota 1">
+                <input type="number" id="num2" placeholder="Nota 2">
+                <input type="number" id="num3" placeholder="Nota 3">
+            </div>
+
+            <input type="button" value="Calcular" onclick="verificarMedia()">
+        </div>
+
+        <div id="res"></div>
+    </div>
+
+<script src="ex02.js"></script>
+</body>
+</html>

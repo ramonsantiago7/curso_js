@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicios</title>
+
+    <style>
+        body{
+            text-align: center;
+            background-color: azure;
+        }
+
+        #container{
+            background-color: white;
+            padding: 10px;
+            margin: 80px;
+            box-shadow: 2px 2px rgba(0, 0, 0, 0.404);
+        }
+
+        #res {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #res.mostrar {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <h1>Par ou Ímpar</h1>
+
+        <div id="pergunta">
+            <p>Digite um número e verifique se ele é Par ou Ímpar</p>
+            <input type="number" name="num" id="num">
+            <input type="button" value="calcule" onclick="verificar()">
+        </div>
+        <div id="res" style="margin-top:10px; font-weight: bold;"></div>
+    </div>
+
+    <script src="ex01.js"></script>
+</body>
+</html>
