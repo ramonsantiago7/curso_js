@@ -1,26 +1,19 @@
 body {
     text-align: center;
     background-color: azure;
+    font-family: Arial, sans-serif;
 }
 
 #container {
     background-color: white;
-    padding: 10px;
-    margin: 80px;
+    padding: 20px;
+    margin: 80px auto;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.404);
+    max-width: 400px;
+    border-radius: 8px;
 }
 
-#notas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem;
-    font-size: 1rem;
-    text-align: center;
-}
-
-#notas input {
+#pergunta input[type="number"] {
     margin: 5px;
     padding: 8px;
     width: 150px;
@@ -44,15 +37,9 @@ input[type="button"]:hover {
 }
 
 #res {
-    opacity: 0;
-    transition: opacity 0.3s ease;
     background-color: #f1f1f1;
     padding: 10px;
     border-radius: 8px;
     margin-top: 15px;
     font-weight: bold;
-}
-
-#res.mostrar {
-    opacity: 1;
 }

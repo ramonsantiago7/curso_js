@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>exercicios</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    
+    <div id="container">
+        <h1>Múltiplo de 3 e 5</h1>
+
+        <div id="pergunta">
+            <p>Digite um número e verifique se ele é múltiplo de 3 e 5</p>
+            <input type="number" name="num" id="num" />
+            <input type="button" value="verifique" onclick="verificar()" />
+        </div>
+        <div id="res"></div>
+    </div>
+
+    <script>
+    function verificar(){
+        let numin = document.querySelector('#num')
+        let res = document.querySelector('#res')
+
+        if(numin.value.length === 0 ){
+            alert('[ERRO]. Por favor digite um número.')
+        } else {
+            let num = Number(numin.value)
+            if(num % 3 === 0 && num % 5 === 0){
+                res.innerHTML = `o número ${num} é multiplo de 3 e 5.`
+            } else {
+                res.innerHTML = `o número ${num} não é multiplo de 3 e 5`
+            }
+        }
+    }
+    </script>
+
+</body>
+</html>
